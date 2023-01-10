@@ -4,8 +4,9 @@ public class VideoProcessor {
     private VideoEncoder encoder;
     private VideoDatabase database;
     private NotificationService notificationService;
-
-    public VideoProcessor(VideoEncoder encoder, VideoDatabase database, NotificationService notificationService) {
+    public VideoProcessor(VideoEncoder encoder,
+                          VideoDatabase database,
+                          NotificationService notificationService) {
         this.encoder = encoder;
         this.database = database;
         this.notificationService = notificationService;
