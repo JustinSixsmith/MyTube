@@ -1,3 +1,3 @@
 package src.com.mytube;public interface NotificationService {
-    void sendNotification(User user);
+    void notify(User user);
 }

@@ -4,6 +4,7 @@ public class VideoProcessor {
     private VideoEncoder encoder;
     private VideoDatabase database;
     private NotificationService notificationService;
+
     public VideoProcessor(VideoEncoder encoder,
                           VideoDatabase database,
                           NotificationService notificationService) {
@@ -15,7 +16,7 @@ public class VideoProcessor {
     public void process(Video video) {
         encoder.encode(video);
         database.store(video);
-        notificationService.sendNotification(video.getUser());
+        notificationService.notify(video.getUser());
     }
 }
 
